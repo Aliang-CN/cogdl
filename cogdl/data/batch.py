@@ -86,7 +86,7 @@ class Batch(Data):
         """
         return bool(re.search("(index|face)", key))
 
-    @property
+    @property                   # 把方法当作属性调用
     def num_graphs(self):
         """Returns the number of graphs in the batch."""
         return self.batch[-1].item() + 1

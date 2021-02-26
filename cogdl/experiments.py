@@ -8,8 +8,8 @@ import yaml
 import optuna
 from tabulate import tabulate
 
-from cogdl.options import get_default_args
-from cogdl.tasks import build_task
+from cogdl.options import get_default_args              # 获取默认参数
+from cogdl.tasks import build_task                      # 建立任务
 from cogdl.utils import set_random_seed, tabulate_results
 from cogdl.configs import BEST_CONFIGS
 from cogdl.datasets import SUPPORTED_DATASETS

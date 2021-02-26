@@ -49,7 +49,7 @@ def build_model(args):
     return MODEL_REGISTRY[args.model].build_model_from_args(args)
 
 
-SUPPORTED_MODELS = {
+SUPPORTED_MODELS = {                                            # 定义了模型的位置
     "hope": "cogdl.models.emb.hope",
     "spectral": "cogdl.models.emb.spectral",
     "hin2vec": "cogdl.models.emb.hin2vec",

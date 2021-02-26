@@ -28,7 +28,7 @@ class MyNodeClassificationDataset(BaseDataset):
         val_mask = torch.zeros(num_nodes).bool()
         val_mask[int(0.3 * num_nodes) : int(0.7 * num_nodes)] = True
         test_mask = torch.zeros(num_nodes).bool()
-        test_mask[int(0.7 * num_nodes) :] = True
+        test_mask[int(0.7 * num_nodes):] = True
         data = Data(x=x, edge_index=edge_index, y=y, train_mask=train_mask, val_mask=val_mask, test_mask=test_mask)
         torch.save(data, "mydata.pt")
         return data

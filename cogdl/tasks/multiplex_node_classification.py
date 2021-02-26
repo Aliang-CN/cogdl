@@ -15,7 +15,7 @@ from . import BaseTask, register_task
 warnings.filterwarnings("ignore")
 
 
-@register_task("multiplex_node_classification")
+@register_task("multiplex_node_classification")       # 主要作用是在TASK_REGISTRY
 class MultiplexNodeClassification(BaseTask):
     """Node classification task."""
 

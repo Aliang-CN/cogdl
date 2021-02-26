@@ -30,10 +30,10 @@ class DataLoader(torch.utils.data.DataLoader):
     def collate_fn(batch):
         item = batch[0]
         if isinstance(item, Data):
-            return Batch.from_data_list(batch)
+            return Batch.from_data_list(batch)                  # collate_fn 由item的数据结构决定
         elif isinstance(item, torch.Tensor):
-            return default_collate(batch)
+            return default_collate(batch)                       # 默认的加载方式
         elif isinstance(item, float):
-            return torch.tensor(batch, dtype=torch.float)
+            return torch.tensor(batch, dtype=torch.float)       #
 
         raise TypeError("DataLoader found invalid type: {}".format(type(item)))

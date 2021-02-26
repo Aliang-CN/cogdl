@@ -3,7 +3,7 @@ import argparse
 
 from cogdl.datasets import DATASET_REGISTRY, try_import_dataset
 from cogdl.models import MODEL_REGISTRY, try_import_model
-from cogdl.tasks import TASK_REGISTRY
+from cogdl.tasks import TASK_REGISTRY                               # 会初始化任务
 from cogdl.trainers import UNIVERSAL_TRAINER_REGISTRY, try_import_universal_trainer
 
 
@@ -36,7 +36,7 @@ def add_task_args(parser):
     group = parser.add_argument_group("Task configuration")
     # fmt: off
     group.add_argument('--task', '-t', default='node_classification', metavar='TASK', required=True,
-                       choices=TASK_REGISTRY.keys(),
+                       choices=TASK_REGISTRY.keys(),            # 获取所有方法
                        help='Task')
     # fmt: on
     return group
