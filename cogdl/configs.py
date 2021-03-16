@@ -1,5 +1,5 @@
 BEST_CONFIGS = {
-    "node_classification": {
+    "node_classification": {                                            # 节点分类任务
         "chebyshev": {"general": {}},
         "dropedge_gcn": {"general": {}},
         "gat": {
@@ -124,7 +124,7 @@ BEST_CONFIGS = {
             },
         },
     },
-    "unsupervised_node_classification": {
+    "unsupervised_node_classification": {                       # 节点分类
         "deepwalk": {
             "general": {},
         },
@@ -223,7 +223,7 @@ BEST_CONFIGS = {
             "max_epoch": 3000,
         },
     },
-    "graph_classification": {
+    "graph_classification": {                                   # 图分类
         "gin": {
             "general": {"lr": 0.001},
             "imdb-b": {"degree_feature": True},
@@ -273,7 +273,7 @@ BEST_CONFIGS = {
             "collab": {"degree_feature": True},
         },
     },
-    "unsupervised_graph_classification": {
+    "unsupervised_graph_classification": {                      # 无监督分类任务
         "graph2vec": {
             "general": {},
             "nci1": {
@@ -290,13 +290,13 @@ BEST_CONFIGS = {
         }
     },
     "link_prediction": {},
-    "multiplex_link_prediction": {
+    "multiplex_link_prediction": {                              # 多路链接预测
         "gatne": {
             "general": {},
             "twitter": {"eval_type": "1"},
         }
     },
-    "multiplex_node_classification": {
+    "multiplex_node_classification": {                          # 多路节点分类
         "hin2vec": {
             "general": {
                 "lr": 0.025,
@@ -309,7 +309,7 @@ BEST_CONFIGS = {
         },
         "pte": {},
     },
-    "heterogeneous_node_classification": {
+    "heterogeneous_node_classification": {                      # 异质节点分类
         "gtn": {
             "general": {
                 "hidden_size": 128,
@@ -326,7 +326,7 @@ BEST_CONFIGS = {
         },
     },
     "pretrain": {},
-    "similarity_search": {
+    "similarity_search": {                                      # 相似度搜索
         "gcc": {
             "general": {},
         },
